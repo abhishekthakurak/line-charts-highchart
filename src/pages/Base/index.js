@@ -1,11 +1,22 @@
 import React, { useRef } from "react";
 import Highcharts from "highcharts/highstock";
+import Boost from "highcharts/modules/boost";
+import HighChartsMore from "highcharts/highcharts-more";
+import HighchartsSolidGauge from "highcharts/modules/solid-gauge";
+import HighchartsXRange from "highcharts/modules/xrange";
 
 function Base() {
   const containerRef = useRef(null);
 
   const handleButtonClick = () => {
     const cb = () => {
+      if (typeof Highcharts === "object") {
+        Boost(Highcharts);
+        HighChartsMore(Highcharts);
+        HighchartsSolidGauge(Highcharts);
+        HighchartsXRange(Highcharts);
+      }
+
       Highcharts.chart(containerRef.current, {
         legend: {
           enabled: false,
@@ -478,7 +489,7 @@ function Base() {
       });
     };
 
-    window.requestAnimationFrame(cb);
+    requestAnimationFrame(cb);
   };
 
   return (
@@ -503,7 +514,7 @@ function Base() {
           display: "inline-block",
         }}
       >
-       Chart container press button chart will appear here
+        Chart container press button chart will appear here
       </div>
     </div>
   );
