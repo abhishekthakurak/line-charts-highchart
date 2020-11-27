@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "line-charts-highchart",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -34,7 +34,9 @@
     "webpack": "^4.41.6",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-dev-server": "^3.10.3",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "highcharts": "8.0.4",
+    "react-highcharts": "16.0.2"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"

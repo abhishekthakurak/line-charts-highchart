@@ -1,4 +1,4 @@
-# react-redux-boilerplate
+# line-charts-highchart
 
 Steps to run code
 
